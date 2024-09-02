@@ -1,0 +1,27 @@
+name: Fetch Hacker News Stories
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs daily at 08:00 UTC
+  workflow_dispatch:
+
+jobs:
+  fetch-stories:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run script
+        env:
+          GOOGLE_CHAT_WEBHOOK: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}
+        run: python fetch_hacker_news.py
