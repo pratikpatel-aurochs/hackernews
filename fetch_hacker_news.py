@@ -77,7 +77,7 @@ if __name__ == "__main__":
     end_index = start_index + stories_per_page
 
     # Define coding-related keywords
-    coding_keywords = ['code', 'programming', 'software', 'developer', 'coding', 'python', 'javascript', 'java', 'ruby', 'c#', 'c++', 'algorithm', 'data structures', 'web development', 'backend', 'frontend']
+    coding_keywords = ['code', 'programming', 'software', 'developer', 'coding', 'python', 'javascript', 'java', 'ruby', 'c#', 'c++', 'algorithm', 'data structures', 'web development', 'backend', 'frontend', 'github', 'sql']
 
     # Fetch and filter stories for the specified page
     filtered_stories = []
